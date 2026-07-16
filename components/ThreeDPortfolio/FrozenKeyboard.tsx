@@ -703,7 +703,12 @@ function Keyboard({
     ref.current.position.y =
       c.posY + Math.sin(t * 0.6) * 0.04 + spinNorm * 0.35;
     ref.current.position.z = c.posZ;
-    ref.current.scale.setScalar(c.scale * (1 - spinNorm * 0.12));
+    // Vertical FOV is fixed, so a narrower canvas crops the keyboard
+    // horizontally instead of shrinking it — scale it down with the canvas
+    // aspect ratio so it keeps fitting as the screen gets smaller.
+    const aspect = state.size.width / state.size.height;
+    const fit = THREE.MathUtils.clamp(aspect / 1.3, 0.45, 1);
+    ref.current.scale.setScalar(c.scale * fit * (1 - spinNorm * 0.12));
   });
 
   const keycapGeom = useMemo(
