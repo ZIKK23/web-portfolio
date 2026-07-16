@@ -1,1 +1,0 @@
-#### Some Interactive features such as the drag and drop API utilized in the landing page works best on Desktop. The website as a whole supports responsive design for devices as small as 320px in width!
