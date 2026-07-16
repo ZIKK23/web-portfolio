@@ -12,13 +12,13 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 65%;
-  height: 60%;
+  width: clamp(280px, 65vw, 900px);
+  aspect-ratio: 3 / 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--gap-medium);
-  padding: 2.5rem;
+  gap: clamp(0.75rem, 2.5vw, var(--gap-medium));
+  padding: clamp(1rem, 4vw, 2.5rem);
   border-radius: var(--radius-medium);
   color: var(--color-white);
   text-decoration: none;
@@ -48,14 +48,14 @@
 
 .sticky-cards .card p {
   font-family: var(--font-primary);
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
   line-height: 1.5;
 }
 
 .sticky-cards .card h1 {
   text-transform: uppercase;
   font-family: var(--font-secondary);
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 800;
   line-height: 1;
 }
@@ -68,12 +68,3 @@
 #card-2 { background-color: #6B8CAE; z-index: 4; }
 #card-3 { background-color: #7A8B99; z-index: 3; }
 #card-4 { background-color: #2F4550; z-index: 2; }
-
-@media (max-width: 1000px) {
-  .sticky-cards .card {
-    width: calc(100% - 2rem);
-    height: auto;
-    aspect-ratio: 3 / 2;
-    padding: 1.5rem;
-  }
-}
