@@ -3,7 +3,7 @@
 .sticky-cards {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: max(60vh, calc(36.5625vw + 6rem));
   overflow: hidden;
   perspective: 1000px;
   background-color: var(--color-bg);
