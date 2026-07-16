@@ -1,0 +1,100 @@
+/* ----- Desktop navigation visibility ----- */
+@media (min-width: 769px) {
+  .hideOnMobile {
+    display: list-item !important;
+  }
+}
+
+/* ----- Mobile navigation + general mobile layout ----- */
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex !important;
+  }
+
+  .hideOnMobile {
+    display: none !important;
+  }
+
+  .contact-footer {
+    padding-top: var(--gap-xl);
+    min-height: auto;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .link-separator {
+    display: none;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  form textarea {
+    min-height: calc(25vh - 80px);
+    max-height: calc(35vh - 80px);
+    height: calc(30vh - 80px);
+  }
+
+  .field-hint {
+    font-size: 0.8rem;
+    flex: 1;
+    margin-right: 0.5rem;
+  }
+
+  .character-counter {
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  /* Not enough room beside a huge clamped name — drop below it, centered. */
+  .scroll-down-text {
+    top: auto;
+    right: auto;
+    bottom: clamp(1rem, 5vh, 2rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tech-stack-callout {
+    max-width: min(85vw, 260px);
+  }
+}
+
+/* ----- Small mobile sidebar ----- */
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* ----- Small devices ----- */
+@media (max-width: 480px) {
+  .scroll-down-text {
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+    padding: clamp(0.2rem, 0.8vw, 0.4rem) clamp(0.4rem, 1.5vw, 0.8rem);
+    gap: clamp(0.05rem, 0.3vw, 0.15rem);
+  }
+}
+
+@media (max-width: 460px) {
+  .job-role-container {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-small);
+  }
+
+  #category-drop-zone {
+    margin-left: 0;
+    justify-content: center;
+    min-height: 50px;
+  }
+}
+

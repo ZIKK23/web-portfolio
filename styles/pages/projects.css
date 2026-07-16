@@ -1,0 +1,19 @@
+.page-header {
+  text-align: center;
+  padding: 4rem 0 2.5rem;
+  border-bottom: var(--border-width-medium) solid var(--color-black);
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+}
+
+.page-header .subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-black);
+  max-width: 600px;
+  margin: 0 auto;
+}
