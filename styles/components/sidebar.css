@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   height: 100dvh;
-  width: 250px;
+  width: min(250px, 100%);
   z-index: var(--z-sidebar);
   background-color: var(--color-white);
   box-shadow: -10px 0 10px var(--color-shadow-light);
