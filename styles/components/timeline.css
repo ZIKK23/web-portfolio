@@ -1,7 +1,7 @@
 .timeline-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5rem 2rem 4rem;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem) clamp(2.5rem, 6vw, 4rem);
 }
 
 .timeline-heading {
@@ -108,13 +108,6 @@
   line-height: 1.7;
   margin: 0;
   max-width: 680px;
-}
-
-@media (max-width: 480px) {
-  .timeline-section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

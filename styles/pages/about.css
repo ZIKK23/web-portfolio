@@ -9,13 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1rem;
+  padding: clamp(2.5rem, 6vw, 4rem) 1rem;
 }
 
 .sticky-wrapper {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: clamp(2rem, 5vw, 4rem);
   width: 100%;
   max-width: 1100px;
 }
@@ -103,7 +103,7 @@
 }
 
 .block-text {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   line-height: 1.6;
   color: var(--color-text-light);
   margin-bottom: 0rem;
@@ -134,7 +134,6 @@
 
 @media (max-width: 768px) {
   .scroll-animation-container {
-    padding: 4rem 1rem;
     min-height: auto;
   }
 
@@ -168,13 +167,5 @@
   .about-image-stack {
     width: 25vh;
     height: 25vh;
-  }
-
-  .text-block h1 {
-    font-size: 1.8rem;
-  }
-
-  .block-text {
-    font-size: 0.9rem;
   }
 }
