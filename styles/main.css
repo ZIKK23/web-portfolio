@@ -26,7 +26,6 @@
 /* ---- Pages ---- */
 @import url('./pages/landing.css');
 @import url('./pages/projects.css');
-@import url('./components/sticky-cards.css');
 
 /* ---- Form (used on contact page; loaded site-wide for consistency) ---- */
 @import url('./components/form.css');
