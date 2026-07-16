@@ -36,7 +36,10 @@ export default function StickyCards() {
       ScrollTrigger.create({
         trigger: root,
         start: 'top top',
-        end: () => `+=${cards[0].getBoundingClientRect().height * totalCards * 0.4}px`,
+        end: () => {
+          const multiplier = window.innerWidth <= 768 ? 0.16 : 0.4;
+          return `+=${cards[0].getBoundingClientRect().height * totalCards * multiplier}px`;
+        },
         pin: true,
         pinSpacing: true,
         scrub: true,

@@ -67,14 +67,15 @@
      below), leaving a tall empty strip before the footer. Shrink the
      section itself so there's less dead space to scroll through. */
   .sticky-cards {
-    height: 65svh;
+    height: 40svh;
   }
 
-  /* Card is centered (top: 50%) in a full-height section — pull it up
-     so it sits closer to the page-header's divider line instead of
-     leaving a tall empty gap above it. */
+  /* Balance the card vertically: gap above (to the header divider)
+     equal to gap below (to the footer, including the pinned
+     scroll-jack distance reserved after the card, see StickyCards.tsx's
+     smaller mobile scroll multiplier). */
   .sticky-cards .card {
-    top: 40%;
+    top: 65%;
   }
 }
 
