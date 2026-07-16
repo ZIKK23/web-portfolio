@@ -1,6 +1,5 @@
 import HeroIntro from "../components/Landing/HeroIntro";
 import RolePicker from "../components/Landing/RolePicker";
-import TechStackSection from "../components/Landing/TechStackSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
       <main>
         <HeroIntro />
         <RolePicker />
-        <TechStackSection />
       </main>
       <Footer />
     </>

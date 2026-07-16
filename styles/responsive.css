@@ -62,10 +62,6 @@
     left: 50%;
     transform: translateX(-50%);
   }
-
-  .tech-stack-callout {
-    max-width: min(85vw, 260px);
-  }
 }
 
 /* ----- Small mobile sidebar ----- */
