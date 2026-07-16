@@ -62,6 +62,13 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  /* Card is centered (top: 50%) in a full-height section — pull it up
+     so it sits closer to the page-header's divider line instead of
+     leaving a tall empty gap above it. */
+  .sticky-cards .card {
+    top: 28%;
+  }
 }
 
 /* ----- Small mobile sidebar ----- */
