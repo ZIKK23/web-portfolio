@@ -62,21 +62,6 @@
     left: 50%;
     transform: translateX(-50%);
   }
-
-  /* Section was a full 100svh with the card parked near the top (see
-     below), leaving a tall empty strip before the footer. Shrink the
-     section itself so there's less dead space to scroll through. */
-  .sticky-cards {
-    height: 40svh;
-  }
-
-  /* Balance the card vertically: gap above (to the header divider)
-     equal to gap below (to the footer, including the pinned
-     scroll-jack distance reserved after the card, see StickyCards.tsx's
-     smaller mobile scroll multiplier). */
-  .sticky-cards .card {
-    top: 65%;
-  }
 }
 
 /* ----- Small mobile sidebar ----- */

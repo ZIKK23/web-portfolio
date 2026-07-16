@@ -4,7 +4,7 @@ Web portfolio for **Hilmi Zikri** ("Zikri"). Next.js 16 (App Router) + TypeScrip
 
 ## Stack
 - Next.js 16, React 19, TypeScript
-- GSAP + ScrollTrigger for the Projects page 3D sticky-cards effect (`components/animations/3d-sticky-cards/`)
+- GSAP for the Projects page 3D sticky-cards effect (`components/animations/3d-sticky-cards/`) — click/tap a card (or GitHub icon's target) to cycle to the next; no ScrollTrigger/scroll-jacking (removed 2026-07-16, was scroll-driven before)
 - Hand-written CSS (no Tailwind/CSS Modules) site-wide, imported once via `styles/main.css` in `app/layout.tsx`
 - EmailJS (CDN script, no npm dep) for contact form
 
@@ -32,7 +32,7 @@ Web portfolio for **Hilmi Zikri** ("Zikri"). Next.js 16 (App Router) + TypeScrip
 - **`portfolio-refactor-modular-css/` (untracked, user-added 2026-07-16).** A copy of the original pre-Next.js static site (`index.html`, `landing-page.js`, `styles/`, etc.) — reference material for restoring/comparing original behavior, not part of the app. Not imported or built by anything in `app/`/`components/`.
 - **No chrome-devtools MCP configured.** For live browser verification (e.g. reproducing a drag-and-drop or interaction bug), `npm install playwright` in a scratch temp dir (not this project's `package.json`) and drive `http://localhost:3000` with a throwaway Node script — faster than guessing from source reading alone, and doesn't pollute the project's dependencies.
 - The legacy static-site files (`index.html`, `about.js`, `style.css`, `contact.html/js`, `projects.html/js`, `gallery.js`, `hamburger-menu.js`, `landing-page.js`, `lighting-presets.js`, `page-effects.js`, `viewer3d.js`), the `3d-portfolio-main/` reference source folder, and duplicate root-level `Assets/`/`CNAME` (byte-identical copies of `public/Assets/`/`public/CNAME` — Next.js only serves from `public/`) have all been deleted (explicit user ask) — everything needed was already copied into `app/`/`components/`/`lib/`/`styles/`/`public/` before removal.
-- Pages are `'use client'` components porting original vanilla-JS behavior near-verbatim inside `useEffect` (drag-and-drop, scroll-jacking, SVG path draw) — intentional to preserve exact original UX, not accidental complexity.
+- Pages are `'use client'` components porting original vanilla-JS behavior near-verbatim inside `useEffect` (drag-and-drop, SVG path draw) — intentional to preserve exact original UX, not accidental complexity.
 - Deploy/CI intentionally not set up yet (deferred by user during initial scaffold).
 
 ## Known open items (placeholder content not yet swapped to real)
@@ -43,7 +43,7 @@ Web portfolio for **Hilmi Zikri** ("Zikri"). Next.js 16 (App Router) + TypeScrip
 - Projects page (`components/animations/3d-sticky-cards/StickyCards.tsx` + `lib/projects.ts`) shows 4 neutral placeholder cards ("Project 1"–"Project 4", placeholder description, `repoUrl: '#'`) — needs replacing with Zikri's real projects (titles, descriptions, repo links).
 
 ## Goal / roadmap
-Base scaffold + migration is done. Landing page narrowed to a single "Full-Stack Dev" role; Projects page's old 4-category accordion (Engineering/Design/Photography/Programming, plus the GLB model viewer and photo gallery it depended on) was replaced with a GSAP ScrollTrigger 3D sticky-cards effect. Next: swap the placeholder project cards for real content, and continue porting eye-catching animations from GitHub repos into `components/animations/<source-name>/` as they come up.
+Base scaffold + migration is done. Landing page narrowed to a single "Full-Stack Dev" role; Projects page's old 4-category accordion (Engineering/Design/Photography/Programming, plus the GLB model viewer and photo gallery it depended on) was replaced with a GSAP 3D sticky-cards effect (click-to-cycle through cards, see Stack section). Next: swap the placeholder project cards for real content, and continue porting eye-catching animations from GitHub repos into `components/animations/<source-name>/` as they come up.
 
 The `/3d-preview` full-portfolio preview (see Important context) has served its purpose and is fully gone, including its one-time keeper (the 3D keyboard) — the landing page is back to just Hero + RolePicker. Seasonal themes / bilingual ES/EN i18n / a 3D tech-stack visual are no longer staged from that source and would need a fresh port from scratch if picked back up.
 
